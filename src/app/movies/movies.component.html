@@ -1,0 +1,17 @@
+<div class="movie-container">
+  <ng-container *ngFor="let item of moviesData">
+    <mat-card class="movie" appearance="outlined">
+      <mat-card-header class="header">
+        <mat-card-title class="title"><b>{{ item.title }}</b></mat-card-title>
+        <mat-card-subtitle>{{ item.genre }}</mat-card-subtitle>
+      </mat-card-header>
+      <div class="image-container">
+        <img mat-card-image src="{{ item.image }}" alt="{{ item.title }}">
+      </div>
+      
+      <mat-card-content class="synopsis-container">
+        <p>{{ item.synopsis }}</p>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
